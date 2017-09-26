@@ -696,6 +696,7 @@ Write-Host ""
 Write-Host "Configuring Windows Update Service to run in standalone svchost..." -ForegroundColor Cyan
 Write-Host ""
 sc.exe config wuauserv type= own
+sc privs wuauserv SeAuditPrivilege/SeCreateGlobalPrivilege/SeCreatePageFilePrivilege/SeTcbPrivilege/SeAssignPrimaryTokenPrivilege/SeImpersonatePrivilege/SeIncreaseQuotaPrivilege/SeShutdownPrivilege/SeDebugPrivilege
 Write-Host ""
 
 
